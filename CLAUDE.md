@@ -37,3 +37,31 @@ We keep all important docs in `./docs` folder and keep updating them, structure 
 ```
 
 **IMPORTANT:** *MUST READ* and *MUST COMPLY* all *INSTRUCTIONS* in project `./CLAUDE.md`, especially *WORKFLOWS* section is *CRITICALLY IMPORTANT*, this rule is *MANDATORY. NON-NEGOTIABLE. NO EXCEPTIONS. MUST REMEMBER AT ALL TIMES!!!*
+
+## Job Applications Tracking
+
+Private job tracking system in `job-applications/`. Templates committed, data gitignored.
+
+**Structure:**
+```
+job-applications/
+├── companies/{company-name}/   # Per-company interview notes
+├── templates/                  # Reusable templates (tracked)
+└── applications.json           # Status tracking (gitignored)
+```
+
+**JSON Schema:**
+```json
+{
+  "id": "001",
+  "company": "Company Name",
+  "position": "Title",
+  "status": "applied|phone_screen|interview|offer|accepted|rejected|withdrawn",
+  "dateApplied": "YYYY-MM-DD",
+  "salary": { "min": 0, "max": 0, "currency": "VND|USD" },
+  "jobUrl": "",
+  "notes": ""
+}
+```
+
+**Commands:** "add job application", "update job status", "list applications"
