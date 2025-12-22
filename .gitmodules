@@ -1,0 +1,3 @@
+[submodule "job-applications-data"]
+	path = job-applications-data
+	url = git@github.com:lpwanw/job-applications-data.git

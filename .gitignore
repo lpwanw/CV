@@ -76,6 +76,9 @@ prompt.md
 .claude/
 .opencode/
 
-# Job applications tracking (private)
+# Job applications tracking
 job-applications/*
 !job-applications/templates/
+
+# Private job data (submodule tracked separately)
+# job-applications-data/ is a git submodule - do NOT ignore it
