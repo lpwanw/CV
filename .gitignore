@@ -75,3 +75,7 @@ prompt.md
 .claude/active-plan
 .claude/
 .opencode/
+
+# Job applications tracking (private)
+job-applications/*
+!job-applications/templates/
