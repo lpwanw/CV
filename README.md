@@ -2,7 +2,7 @@
 
 **Full-Stack Ruby on Rails Engineer** | 4 Years Experience
 
-[![Live CV](https://img.shields.io/badge/CV-Live-blue?style=flat-square)](https://lpwanw.github.io/CV/)
+[![Live CV](https://img.shields.io/badge/CV-Live-blue?style=flat-square)](cv.leewestern.com)
 [![GitHub](https://img.shields.io/badge/GitHub-lpwanw-181717?style=flat-square&logo=github)](https://github.com/lpwanw)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-lpwanw-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/lpwanw/)
 
@@ -40,7 +40,7 @@ Led healthcare application development for Japanese clients. Mentored team of 4 
 
 ## View CV
 
-**Live:** https://lpwanw.github.io/CV/
+**Live:** cv.leewestern.com
 
 Features:
 - Responsive design (Tailwind CSS)
@@ -51,5 +51,5 @@ Features:
 
 - **Email:** lp.wanw@gmail.com
 - **Phone:** +84 393 203 261
-- **GitHub:** [github.com/lpwanw](https://github.com/lpwanw)
+- **GitHub:** [github.com/lpwanw](cv.leewestern.com)
 - **LinkedIn:** [linkedin.com/in/lpwanw](https://www.linkedin.com/in/lpwanw/)
