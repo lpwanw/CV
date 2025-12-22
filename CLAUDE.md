@@ -40,14 +40,14 @@ We keep all important docs in `./docs` folder and keep updating them, structure 
 
 ## Job Applications Tracking
 
-Private job tracking system in `job-applications/`. Templates committed, data gitignored.
+Private job tracking system in `job-applications-data/` (git submodule → private repo).
 
 **Structure:**
 ```
-job-applications/
+job-applications-data/          # Private submodule
 ├── companies/{company-name}/   # Per-company interview notes
-├── templates/                  # Reusable templates (tracked)
-└── applications.json           # Status tracking (gitignored)
+├── templates/                  # Reusable templates
+└── applications.json           # Status tracking
 ```
 
 **JSON Schema:**
