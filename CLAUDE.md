@@ -65,3 +65,5 @@ job-applications-data/          # Private submodule
 ```
 
 **Commands:** "add job application", "update job status", "list applications"
+
+**IMPORTANT:** Always read `job-applications-data/templates/README.md` first when doing job-related tasks.
