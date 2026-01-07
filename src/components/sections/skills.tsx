@@ -22,8 +22,8 @@ const skillCategories = [
     title: 'Frontend & UI',
     skills: [
       { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
-      { name: 'Hotwire', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hotwire/hotwire-original.svg' },
-      { name: 'Stimulus', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/stimulus/stimulus-original.svg' },
+      { name: 'Hotwire', icon: '/icons/hotwire.svg', tooltip: 'HTML-over-the-wire framework for Rails' },
+      { name: 'Stimulus', icon: '/icons/stimulus.svg', tooltip: 'Modest JavaScript framework for Rails' },
       { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
     ],
   },
@@ -34,7 +34,7 @@ const skillCategories = [
       { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
       { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
       { name: 'RSpec', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rspec/rspec-original.svg' },
-      { name: 'Claude Code', icon: '/icons/claude.svg' },
+      { name: 'Claude Code', icon: '/icons/claude.svg', tooltip: 'AI-powered coding assistant by Anthropic' },
     ],
   },
 ]
@@ -56,9 +56,12 @@ export function Skills() {
                   {category.skills.map((skill) => (
                     <MotionItem
                       key={skill.name}
-                      className="flex flex-col items-center gap-2"
+                      className="flex flex-col items-center gap-2 group relative"
                     >
-                      <div className="w-14 h-14 p-2.5 bg-bg-primary rounded-lg border border-slate-700/50 flex items-center justify-center hover:border-primary/50 hover:scale-110 transition-all">
+                      <div
+                        className="w-14 h-14 p-2.5 bg-bg-primary rounded-lg border border-slate-700/50 flex items-center justify-center hover:border-primary/50 hover:scale-110 transition-all"
+                        title={skill.tooltip}
+                      >
                         <img
                           src={skill.icon}
                           alt={skill.name}
@@ -69,6 +72,12 @@ export function Skills() {
                       <span className="text-xs text-text-secondary font-medium text-center">
                         {skill.name}
                       </span>
+                      {skill.tooltip && (
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-bg-secondary border border-slate-700 rounded-lg text-xs text-text-primary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                          {skill.tooltip}
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-700" />
+                        </div>
+                      )}
                     </MotionItem>
                   ))}
                 </MotionList>
