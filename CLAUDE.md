@@ -67,3 +67,7 @@ job-applications-data/          # Private submodule
 **Commands:** "add job application", "update job status", "list applications"
 
 **IMPORTANT:** Always read `job-applications-data/templates/README.md` first when doing job-related tasks.
+
+## Git Workflow
+
+**IMPORTANT:** Do NOT push to `main` branch automatically after each edit. Only commit changes locally. Push only when explicitly requested by the user.
