@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Phuong Tay - Full-Stack Ruby on Rails Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        /* A4 Page Container */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 20mm;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+            overflow: visible;
+        }
+
+        .page + .page {
+            margin-top: 30px;
+        }
+
+        /* Mobile: stack naturally */
+        @media screen and (max-width: 799px) {
+            .page {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 24px;
+                box-shadow: none;
+            }
+            .page + .page {
+                margin-top: 0;
+            }
+        }
+
+        /* Compact CV styles - font size reductions only */
+        .cv-compact header h1 {
+            font-size: 1.75rem !important;
+        }
+        .cv-compact header h2 {
+            font-size: 1.1rem !important;
+            margin-top: 4px !important;
+        }
+        .cv-compact header .flex.items-center {
+            margin-bottom: 2px !important;
+            font-size: 0.8rem !important;
+        }
+        .cv-compact section {
+            margin-bottom: 12px !important;
+        }
+        .cv-compact section h3 {
+            font-size: 1.1rem !important;
+            margin-bottom: 8px !important;
+        }
+        .cv-compact section h4 {
+            font-size: 0.95rem !important;
+        }
+        .cv-compact .mb-6 {
+            margin-bottom: 10px !important;
+        }
+        .cv-compact .mb-4 {
+            margin-bottom: 6px !important;
+        }
+        .cv-compact .mb-2 {
+            margin-bottom: 4px !important;
+        }
+        .cv-compact .gap-4 {
+            gap: 8px !important;
+        }
+        .cv-compact p, .cv-compact li, .cv-compact span {
+            font-size: 0.85rem !important;
+            line-height: 1.4 !important;
+        }
+        .cv-compact ul {
+            margin-top: 4px !important;
+        }
+        .cv-compact .grid {
+            gap: 6px !important;
+        }
+
+        /* Page break control */
+        .job-entry {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+        }
+        section {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+        }
+
+        /* Print styles */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .print\\:hidden {
+                display: none !important;
+            }
+            #cv-content {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+            }
+            .page {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 20mm;
+                box-shadow: none;
+                break-after: page;
+                page-break-after: always;
+            }
+            .page:last-child {
+                break-after: auto;
+                page-break-after: auto;
+            }
+            .job-entry {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+        }
+
+        /* PDF export specific styles */
+        .pdf-mode {
+            background: white !important;
+            padding: 0 !important;
+        }
+        .pdf-mode #cv-content {
+            box-shadow: none !important;
+            border-radius: 0 !important;
+        }
+        .pdf-mode .max-w-5xl {
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .pdf-mode .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 20mm;
+            box-shadow: none;
+            break-after: page;
+            page-break-after: always;
+        }
+        .pdf-mode .page:last-child {
+            break-after: auto;
+            page-break-after: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6 md:p-12">
+    <div class="max-w-5xl mx-auto">
+        <button id="export-btn" onclick="generatePDF()" class="mb-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2 print:hidden disabled:opacity-50 disabled:cursor-not-allowed">
+            <i class="fas fa-file-pdf" id="btn-icon"></i>
+            <span id="btn-text">Export to PDF</span>
+        </button>
+        <div id="cv-content">
+            <!-- Page 1: Header + Summary + Skills + Professional Experience -->
+            <div class="page">
+                <header class="bg-blue-600 text-white p-6 -m-[20mm] mb-6" style="margin: -20mm -20mm 24px -20mm; padding: 24px;">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <h1 class="text-4xl font-bold">Le Phuong Tay</h1>
+                            <h2 class="text-2xl mt-2">Full-Stack Ruby on Rails Engineer</h2>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+84393203261" class="hover:text-blue-200">+84 393 203 261</a>
+                            </div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:lp.wanw@gmail.com" class="hover:text-blue-200">lp.wanw@gmail.com</a>
+                            </div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/lpwanw" target="_blank" class="hover:text-blue-200">github.com/lpwanw</a>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/lpwanw/" target="_blank" class="hover:text-blue-200">linkedin.com/in/lpwanw</a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Professional Summary</h3>
+                    <p class="text-gray-700">Full-Stack Ruby on Rails Engineer with 4 years of experience building scalable SaaS applications. Architected workflow engines, integrated AI capabilities, and delivered end-to-end solutions from database design to production deployment. Proven track record leading development teams at Japanese tech company (SUN* Inc.) and shipping complex features for healthcare platforms.</p>
+                </section>
+
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Technical Skills</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold mb-2">Backend & Frameworks</h4>
+                            <p class="text-gray-700">Ruby on Rails (4 years), Ruby, ActiveRecord, GraphQL, RESTful API, Sidekiq</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Database & Storage</h4>
+                            <p class="text-gray-700">PostgreSQL, MySQL, DynamoDB, Redis, AWS S3</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Frontend & UI</h4>
+                            <p class="text-gray-700">JavaScript, TypeScript, React, Hotwire/Stimulus, Tailwind CSS</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">DevOps & Tools</h4>
+                            <p class="text-gray-700">Docker, AWS (S3, EC2, Lambda, SNS, SES), Git, CI/CD, RSpec/TDD</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Professional Experience</h3>
+
+                    <div class="mb-5 job-entry">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold">TINYpulse by WebMD Health Services</h4>
+                            <span class="text-gray-600">Feb 2024 - Present</span>
+                        </div>
+                        <div class="text-gray-700 mb-2">
+                            <span class="font-medium">Tech:</span> Ruby on Rails, ReactJS, PostgreSQL, Microservices, Redis
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Develop new features for employee engagement platform using Rails + React microservices architecture</li>
+                            <li>Optimize application performance through code refactoring and database query optimization</li>
+                            <li>Resolve technical debt improving system maintainability and test coverage</li>
+                            <li>Collaborate with cross-functional team on full-stack development initiatives</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-entry">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold">SUN* INC. (Japanese Tech Company)</h4>
+                            <span class="text-gray-600">Nov 2021 - Jan 2024</span>
+                        </div>
+                        <div class="text-gray-700 mb-2">
+                            <span class="font-medium">Tech:</span> Ruby on Rails, NodeJS, TypeScript, MySQL, DynamoDB, AWS (S3, SNS, SES, Lambda), OAuth
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Led development of healthcare applications for Japanese clients, extending project from 2 months to 1 year</li>
+                            <li>Mentored team of 4 developers; managed task assignments and conducted code reviews</li>
+                            <li>Integrated third-party APIs (Fitbit, Google Fit, Amazon Gift Cards) for health monitoring features</li>
+                            <li>Designed efficient database structures for MySQL and DynamoDB single-table design</li>
+                            <li>Implemented OAuth authentication and RESTful APIs for secure integrations</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Page 2: Freelance Projects + Education + Activities -->
+            <div class="page">
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Freelance Projects (Upwork)</h3>
+
+                    <div class="mb-5 job-entry">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold">Novalexi - IP Management SaaS Platform</h4>
+                            <span class="text-gray-600">2024 - Present</span>
+                        </div>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Role:</span> Solo Backend Developer (End-to-End) | <span class="font-medium">Client:</span> Arabic Organization
+                        </p>
+                        <div class="text-gray-700 mb-2">
+                            <span class="font-medium">Tech:</span> Ruby on Rails, PostgreSQL, AWS S3, SendGrid, AI (ruby_llm)
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Architected and built complete Intellectual Property management SaaS from scratch</li>
+                            <li>Designed Workflow Engine with hydration templates for complex automation pipelines</li>
+                            <li>Integrated AI capabilities using ruby_llm enabling intelligent chat and data analysis</li>
+                            <li>Implemented file management (S3) and transactional email system (SendGrid)</li>
+                            <li>Planning multi-tenant SaaS expansion architecture</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-5 job-entry">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-lg font-semibold">Feedback Robot - Survey & Feedback Platform</h4>
+                            <span class="text-gray-600">2023 - 2024</span>
+                        </div>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Role:</span> Solo Backend Developer (End-to-End)
+                        </p>
+                        <div class="text-gray-700 mb-2">
+                            <span class="font-medium">Tech:</span> Ruby on Rails, PostgreSQL, Webhooks, Third-party APIs
+                        </div>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Built Workflow Engine supporting third-party and webhook event triggers</li>
+                            <li>Designed flexible survey system with customizable question types</li>
+                            <li>Implemented real-time event processing via webhook integrations</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="mb-6">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Education</h3>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-semibold">Saigon University</h4>
+                            <p class="text-gray-700">Bachelor's in Information Technology | GPA: 3.0</p>
+                        </div>
+                        <span class="text-gray-600">Oct 2018 - May 2023</span>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Additional Activities</h3>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="text-lg font-semibold">Programming Instructor - MindX Technology School</h4>
+                            <p class="text-gray-700">Taught foundational programming to 50+ students (kids & teens level)</p>
+                        </div>
+                        <span class="text-gray-600">2020 - 2023</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function generatePDF() {
+            const btn = document.getElementById('export-btn');
+            const btnIcon = document.getElementById('btn-icon');
+            const btnText = document.getElementById('btn-text');
+            const element = document.getElementById('cv-content');
+            const body = document.body;
+
+            // Show loading state
+            btn.disabled = true;
+            btnIcon.className = 'fas fa-spinner fa-spin';
+            btnText.textContent = 'Generating...';
+
+            // Add compact mode for PDF export
+            body.classList.add('pdf-mode');
+            element.classList.add('cv-compact');
+
+            const options = {
+                margin: 0,
+                filename: 'LePhuongTay-FullStack-Rails-Engineer.pdf',
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    windowWidth: 794
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                },
+                pagebreak: {
+                    mode: ['css'],
+                    after: '.page',
+                    avoid: ['.job-entry', 'section']
+                }
+            };
+
+            try {
+                await html2pdf()
+                    .set(options)
+                    .from(element)
+                    .save();
+
+                // Success feedback
+                btnIcon.className = 'fas fa-check';
+                btnText.textContent = 'Downloaded!';
+
+                setTimeout(() => {
+                    btnIcon.className = 'fas fa-file-pdf';
+                    btnText.textContent = 'Export to PDF';
+                    btn.disabled = false;
+                }, 2000);
+            } catch (err) {
+                console.error('Error generating PDF:', err);
+                btnIcon.className = 'fas fa-exclamation-triangle';
+                btnText.textContent = 'Error - Try Again';
+
+                setTimeout(() => {
+                    btnIcon.className = 'fas fa-file-pdf';
+                    btnText.textContent = 'Export to PDF';
+                    btn.disabled = false;
+                }, 3000);
+            } finally {
+                // Remove compact and PDF mode classes
+                body.classList.remove('pdf-mode');
+                element.classList.remove('cv-compact');
+            }
+        }
+    </script>
+</body>
+</html>

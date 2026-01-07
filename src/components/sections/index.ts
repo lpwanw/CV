@@ -1,0 +1,8 @@
+export { Navigation } from './navigation'
+export { Hero } from './hero'
+export { Skills } from './skills'
+export { ExperienceSection } from './experience'
+export { Projects } from './projects'
+export { EducationSection } from './education'
+export { Contact } from './contact'
+export { Footer } from './footer'
