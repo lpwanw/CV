@@ -23,15 +23,22 @@ const skillCategories = [
     skills: [
       { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
       { name: 'Hotwire', icon: '/icons/hotwire.svg', tooltip: 'HTML-over-the-wire framework for Rails' },
-      { name: 'Stimulus', icon: '/icons/stimulus.svg', tooltip: 'Modest JavaScript framework for Rails' },
       { name: 'Tailwind', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
+    ],
+  },
+  {
+    title: 'AWS Services',
+    skills: [
+      { name: 'S3', icon: '/icons/aws-s3.svg', tooltip: 'Simple Storage Service' },
+      { name: 'EC2', icon: '/icons/aws-ec2.svg', tooltip: 'Elastic Compute Cloud' },
+      { name: 'SNS', icon: '/icons/aws-sns.svg', tooltip: 'Simple Notification Service' },
+      { name: 'SES', icon: '/icons/aws-ses.svg', tooltip: 'Simple Email Service' },
     ],
   },
   {
     title: 'DevOps & Tools',
     skills: [
       { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
-      { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
       { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
       { name: 'RSpec', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rspec/rspec-original.svg' },
       { name: 'Claude Code', icon: '/icons/claude.svg', tooltip: 'AI-powered coding assistant by Anthropic' },
