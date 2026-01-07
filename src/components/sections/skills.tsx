@@ -34,6 +34,7 @@ const skillCategories = [
       { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
       { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
       { name: 'RSpec', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rspec/rspec-original.svg' },
+      { name: 'Claude Code', icon: 'https://cdn.jsdelivr.net/gh/anthropics/anthropic-cookbook@main/misc/claude_logo.svg' },
     ],
   },
 ]
