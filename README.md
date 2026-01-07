@@ -21,10 +21,10 @@ Ruby on Rails engineer specializing in scalable SaaS applications, workflow engi
 
 ## Experience
 
-### TINYpulse by WebMD Health Services (2024 - Present)
+### TINYpulse by WebMD Health Services (Feb 2024 - Present)
 Employee engagement platform using Rails + React microservices architecture.
 
-### SUN* INC. - Japanese Tech Company (2022 - 2023)
+### SUN* INC. - Japanese Tech Company (Nov 2021 - Jan 2024)
 Led healthcare application development for Japanese clients. Mentored team of 4 developers.
 
 ### Freelance Projects (Upwork)
