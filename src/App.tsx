@@ -13,7 +13,7 @@ function App() {
   return (
     <PageLayout>
       <Hero profile={profile} />
-      <Skills skills={profile.skills} />
+      <Skills />
       <ExperienceSection experiences={profile.experience} />
       <Projects projects={profile.projects} />
       <EducationSection education={profile.education} activities={profile.activities} />

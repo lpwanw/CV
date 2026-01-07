@@ -13,19 +13,19 @@ export const profile: Profile = {
   skills: [
     {
       title: 'Backend & Frameworks',
-      skills: ['Ruby on Rails', 'Ruby', 'ActiveRecord', 'GraphQL', 'RESTful API', 'Sidekiq'],
+      skills: ['Ruby on Rails', 'Ruby', 'GraphQL', 'Sidekiq'],
     },
     {
       title: 'Database & Storage',
-      skills: ['PostgreSQL', 'MySQL', 'DynamoDB', 'Redis', 'AWS S3'],
+      skills: ['PostgreSQL', 'MySQL', 'DynamoDB', 'Redis'],
     },
     {
       title: 'Frontend & UI',
-      skills: ['JavaScript', 'TypeScript', 'React', 'Hotwire/Stimulus', 'Tailwind CSS'],
+      skills: ['JavaScript', 'Hotwire', 'Tailwind CSS'],
     },
     {
       title: 'DevOps & Tools',
-      skills: ['Docker', 'AWS (S3, EC2, Lambda, SNS, SES)', 'Git', 'CI/CD', 'RSpec/TDD'],
+      skills: ['Docker', 'AWS', 'Git', 'RSpec'],
     },
   ],
   experience: [
