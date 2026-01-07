@@ -1,4 +1,4 @@
-import { Container, SectionTitle, Card, Badge, MotionSection, MotionList, MotionItem } from '@/components/common'
+import { Container, SectionTitle, Card, Badge, MotionSection, MotionList, MotionItem, ProjectLightbox } from '@/components/common'
 import type { Project } from '@/types'
 
 interface ProjectsProps {
@@ -17,6 +17,14 @@ export function Projects({ projects }: ProjectsProps) {
           {projects.map((project) => (
             <MotionItem key={project.id}>
               <Card hover className="flex flex-col h-full">
+                {project.images && project.images.length > 0 && (
+                  <ProjectLightbox
+                    images={project.images}
+                    thumbnail={project.thumbnail}
+                    projectName={project.name}
+                  />
+                )}
+
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="text-xl font-bold text-text-primary">{project.name}</h3>
@@ -62,7 +70,7 @@ export function Projects({ projects }: ProjectsProps) {
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        Live Demo
+                        Visit Website
                       </a>
                     )}
                     {project.repoUrl && (

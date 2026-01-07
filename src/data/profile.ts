@@ -3,7 +3,7 @@ import type { Profile } from '@/types'
 export const profile: Profile = {
   name: 'Le Phuong Tay',
   title: 'Full-Stack Ruby on Rails Engineer',
-  summary: 'Full-Stack Ruby on Rails Engineer with 4 years of experience building scalable SaaS applications. Architected workflow engines, integrated AI capabilities, and delivered end-to-end solutions from database design to production deployment. Proven track record leading development teams at Japanese tech company (SUN* Inc.) and shipping complex features for healthcare platforms.',
+  summary: 'Full-Stack Ruby on Rails Engineer with 4+ years building scalable SaaS applications. Specialized in architecting workflow engines, integrating AI capabilities, and delivering end-to-end solutions from database design to production deployment. Targeting Senior/Lead Engineer role within 3 years through deep technical expertise and team leadership.',
   contact: {
     phone: '+84 393 203 261',
     email: 'lp.wanw@gmail.com',
@@ -75,19 +75,53 @@ export const profile: Profile = {
         'Implemented file management (S3) and transactional email system (SendGrid)',
         'Planning multi-tenant SaaS expansion architecture',
       ],
+      thumbnail: '/images/projects/novalexi/thumbnail.jpg',
+      images: [
+        {
+          src: '/images/projects/novalexi/workflow-engine.jpg',
+          alt: 'Workflow engine with hydration templates',
+          caption: 'Workflow Engine',
+        },
+        {
+          src: '/images/projects/novalexi/ip-management.jpg',
+          alt: 'IP management dashboard',
+          caption: 'IP Management',
+        },
+      ],
     },
     {
       id: 'feedback-robot',
-      name: 'Feedback Robot - Survey & Feedback Platform',
-      description: 'Survey platform with workflow automation and real-time event processing.',
-      role: 'Solo Backend Developer (End-to-End)',
+      name: 'Feedback Robot - AI-Powered Customer Feedback Platform',
+      description: 'All-in-one customer feedback platform with AI-powered survey creation, automated sentiment analysis, and workflow automation.',
+      role: 'Backend Developer - Automation & Radar Features',
       period: '2023 - 2024',
-      tech: ['Ruby on Rails', 'PostgreSQL', 'Webhooks', 'Third-party APIs'],
+      tech: ['Ruby on Rails', 'PostgreSQL', 'Webhooks', 'REST APIs', 'Third-party Integrations'],
       highlights: [
-        'Built Workflow Engine supporting third-party and webhook event triggers',
-        'Designed flexible survey system with customizable question types',
-        'Implemented real-time event processing via webhook integrations',
+        'Built Automation feature: Workflow Engine with custom triggers, conditions, and actions for automated feedback processing',
+        'Developed Radar feature: Review aggregation system pulling data from multiple platforms (Google, Facebook, Yelp) for cross-platform sentiment analysis',
+        'Implemented webhook integrations for real-time event processing and third-party triggers',
+        'Designed flexible automation rules supporting conditional logic and multi-step workflows',
       ],
+      thumbnail: '/images/projects/feedback-robot/thumbnail.png',
+      images: [
+
+        {
+          src: '/images/projects/feedback-robot/automation-feature.png',
+          alt: 'Workflow automation builder with triggers and actions',
+          caption: 'Automation Feature',
+        },
+        {
+          src: '/images/projects/feedback-robot/radar-feature.png',
+          alt: 'Review aggregation from Google, Facebook, and Yelp',
+          caption: 'Radar Feature',
+        },
+        {
+          src: '/images/projects/feedback-robot/dashboard-overview.png',
+          alt: 'Feedback Robot dashboard with survey responses',
+          caption: 'Dashboard Overview',
+        }
+      ],
+      liveUrl: 'https://www.feedbackrobot.com/',
     },
   ],
   education: {

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagon background -->
+  <path d="M32 2 L58 16 L58 48 L32 62 L6 48 L6 16 Z" fill="#2d3748" stroke="#f97316" stroke-width="2.5"/>
+  <!-- Left curly brace -->
+  <text x="12" y="36" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f97316">{</text>
+  <!-- REST API text -->
+  <text x="32" y="30" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">REST</text>
+  <text x="32" y="42" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">API</text>
+  <!-- Right curly brace -->
+  <text x="47" y="36" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f97316">}</text>
+  <!-- Shield icon -->
+  <path d="M52 44 L52 52 Q52 56 48 58 Q52 56 52 52 L58 52 L58 44 Q55 44 52 44 Z" fill="#f97316"/>
+  <path d="M48 46 L48 53 Q48 56 52 58 Q48 56 48 53 L48 46 L56 46 L56 53 Q56 56 52 58 Q56 56 56 53 L56 46 Z" fill="#f97316" stroke="#2d3748" stroke-width="0.5"/>
+</svg>

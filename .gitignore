@@ -81,3 +81,4 @@ job-applications/
 
 # Private job data submodule (tracked separately)
 # job-applications-data/ is a git submodule - do NOT ignore it
+/docs/**/*
