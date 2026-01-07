@@ -8,10 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
-        /* Compact CV styles */
-        .cv-compact header {
-            padding: 16px 24px !important;
+        /* A4 Page Container */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 20mm;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+            overflow: visible;
         }
+
+        .page + .page {
+            margin-top: 30px;
+        }
+
+        /* Mobile: stack naturally */
+        @media screen and (max-width: 799px) {
+            .page {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 24px;
+                box-shadow: none;
+            }
+            .page + .page {
+                margin-top: 0;
+            }
+        }
+
+        /* Compact CV styles - font size reductions only */
         .cv-compact header h1 {
             font-size: 1.75rem !important;
         }
@@ -22,9 +49,6 @@
         .cv-compact header .flex.items-center {
             margin-bottom: 2px !important;
             font-size: 0.8rem !important;
-        }
-        .cv-compact main {
-            padding: 16px 24px !important;
         }
         .cv-compact section {
             margin-bottom: 12px !important;
@@ -59,7 +83,7 @@
             gap: 6px !important;
         }
 
-        /* Page break control - prevent cutting job entries */
+        /* Page break control */
         .job-entry {
             page-break-inside: avoid !important;
             break-inside: avoid !important;
@@ -71,6 +95,10 @@
 
         /* Print styles */
         @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
             body {
                 background: white !important;
                 padding: 0 !important;
@@ -82,6 +110,19 @@
             #cv-content {
                 box-shadow: none !important;
                 border-radius: 0 !important;
+            }
+            .page {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 20mm;
+                box-shadow: none;
+                break-after: page;
+                page-break-after: always;
+            }
+            .page:last-child {
+                break-after: auto;
+                page-break-after: auto;
             }
             .job-entry {
                 page-break-inside: avoid !important;
@@ -103,6 +144,19 @@
             padding: 0 !important;
             margin: 0 !important;
         }
+        .pdf-mode .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 20mm;
+            box-shadow: none;
+            break-after: page;
+            page-break-after: always;
+        }
+        .pdf-mode .page:last-child {
+            break-after: auto;
+            page-break-after: auto;
+        }
     </style>
 </head>
 <body class="bg-gray-100 p-6 md:p-12">
@@ -111,44 +165,42 @@
             <i class="fas fa-file-pdf" id="btn-icon"></i>
             <span id="btn-text">Export to PDF</span>
         </button>
-        <div id="cv-content" class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <!-- Header Section -->
-            <header class="bg-blue-600 text-white p-8">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                    <div>
-                        <h1 class="text-4xl font-bold">Le Phuong Tay</h1>
-                        <h2 class="text-2xl mt-2">Full-Stack Ruby on Rails Engineer</h2>
+        <div id="cv-content">
+            <!-- Page 1: Header + Summary + Skills + Professional Experience -->
+            <div class="page">
+                <header class="bg-blue-600 text-white p-6 -m-[20mm] mb-6" style="margin: -20mm -20mm 24px -20mm; padding: 24px;">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <h1 class="text-4xl font-bold">Le Phuong Tay</h1>
+                            <h2 class="text-2xl mt-2">Full-Stack Ruby on Rails Engineer</h2>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+84393203261" class="hover:text-blue-200">+84 393 203 261</a>
+                            </div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:lp.wanw@gmail.com" class="hover:text-blue-200">lp.wanw@gmail.com</a>
+                            </div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/lpwanw" target="_blank" class="hover:text-blue-200">github.com/lpwanw</a>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/lpwanw/" target="_blank" class="hover:text-blue-200">linkedin.com/in/lpwanw</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-4 md:mt-0">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+84393203261" class="hover:text-blue-200">+84 393 203 261</a>
-                        </div>
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:lp.wanw@gmail.com" class="hover:text-blue-200">lp.wanw@gmail.com</a>
-                        </div>
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/lpwanw" target="_blank" class="hover:text-blue-200">github.com/lpwanw</a>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/lpwanw/" target="_blank" class="hover:text-blue-200">linkedin.com/in/lpwanw</a>
-                        </div>
-                    </div>
-                </div>
-            </header>
+                </header>
 
-            <main class="p-8">
-                <!-- Professional Summary Section -->
-                <section class="mb-8">
+                <section class="mb-6">
                     <h3 class="text-2xl font-bold text-blue-600 mb-4">Professional Summary</h3>
                     <p class="text-gray-700">Full-Stack Ruby on Rails Engineer with 4 years of experience building scalable SaaS applications. Architected workflow engines, integrated AI capabilities, and delivered end-to-end solutions from database design to production deployment. Proven track record leading development teams at Japanese tech company (SUN* Inc.) and shipping complex features for healthcare platforms.</p>
                 </section>
 
-                <!-- Technical Skills Section -->
-                <section class="mb-8">
+                <section class="mb-6">
                     <h3 class="text-2xl font-bold text-blue-600 mb-4">Technical Skills</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
@@ -170,12 +222,10 @@
                     </div>
                 </section>
 
-                <!-- Professional Experience Section -->
-                <section class="mb-8">
+                <section class="mb-6">
                     <h3 class="text-2xl font-bold text-blue-600 mb-4">Professional Experience</h3>
 
-                    <!-- TINYpulse -->
-                    <div class="mb-6 job-entry">
+                    <div class="mb-5 job-entry">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="text-lg font-semibold">TINYpulse by WebMD Health Services</h4>
                             <span class="text-gray-600">Feb 2024 - Present</span>
@@ -191,8 +241,7 @@
                         </ul>
                     </div>
 
-                    <!-- SUN* Experience -->
-                    <div class="mb-6 job-entry">
+                    <div class="job-entry">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="text-lg font-semibold">SUN* INC. (Japanese Tech Company)</h4>
                             <span class="text-gray-600">Nov 2021 - Jan 2024</span>
@@ -209,13 +258,14 @@
                         </ul>
                     </div>
                 </section>
+            </div>
 
-                <!-- Freelance Projects Section -->
-                <section class="mb-8">
+            <!-- Page 2: Freelance Projects + Education + Activities -->
+            <div class="page">
+                <section class="mb-6">
                     <h3 class="text-2xl font-bold text-blue-600 mb-4">Freelance Projects (Upwork)</h3>
 
-                    <!-- Novalexi -->
-                    <div class="mb-6 job-entry">
+                    <div class="mb-5 job-entry">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="text-lg font-semibold">Novalexi - IP Management SaaS Platform</h4>
                             <span class="text-gray-600">2024 - Present</span>
@@ -235,8 +285,7 @@
                         </ul>
                     </div>
 
-                    <!-- Feedback Robot -->
-                    <div class="mb-6 job-entry">
+                    <div class="mb-5 job-entry">
                         <div class="flex justify-between items-start mb-2">
                             <h4 class="text-lg font-semibold">Feedback Robot - Survey & Feedback Platform</h4>
                             <span class="text-gray-600">2023 - 2024</span>
@@ -255,8 +304,7 @@
                     </div>
                 </section>
 
-                <!-- Education Section -->
-                <section class="mb-8">
+                <section class="mb-6">
                     <h3 class="text-2xl font-bold text-blue-600 mb-4">Education</h3>
                     <div class="flex justify-between items-start">
                         <div>
@@ -267,7 +315,6 @@
                     </div>
                 </section>
 
-                <!-- Additional Activities Section -->
                 <section>
                     <h3 class="text-2xl font-bold text-blue-600 mb-4">Additional Activities</h3>
                     <div class="flex justify-between items-start">
@@ -278,7 +325,7 @@
                         <span class="text-gray-600">2020 - 2023</span>
                     </div>
                 </section>
-            </main>
+            </div>
         </div>
     </div>
 
@@ -300,7 +347,7 @@
             element.classList.add('cv-compact');
 
             const options = {
-                margin: [5, 5, 5, 5],
+                margin: 0,
                 filename: 'LePhuongTay-FullStack-Rails-Engineer.pdf',
                 image: {
                     type: 'jpeg',
@@ -309,7 +356,8 @@
                 html2canvas: {
                     scale: 2,
                     useCORS: true,
-                    logging: false
+                    logging: false,
+                    windowWidth: 794
                 },
                 jsPDF: {
                     unit: 'mm',
@@ -317,8 +365,9 @@
                     orientation: 'portrait'
                 },
                 pagebreak: {
-                    mode: ['css', 'legacy'],
-                    avoid: ['.job-entry', 'section', 'header']
+                    mode: ['css'],
+                    after: '.page',
+                    avoid: ['.job-entry', 'section']
                 }
             };
 
