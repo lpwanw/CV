@@ -1,24 +1,15 @@
-import { PageLayout } from '@/components/layouts/page-layout'
-import {
-  Hero,
-  Skills,
-  ExperienceSection,
-  Projects,
-  EducationSection,
-  Contact,
-} from '@/components/sections'
-import { profile } from '@/data/profile'
+import { Route, Switch } from 'wouter'
+import { HomePage, CVPage } from '@/pages'
 
 function App() {
   return (
-    <PageLayout>
-      <Hero profile={profile} />
-      <Skills />
-      <ExperienceSection experiences={profile.experience} />
-      <Projects projects={profile.projects} />
-      <EducationSection education={profile.education} activities={profile.activities} />
-      <Contact contact={profile.contact} />
-    </PageLayout>
+    <Switch>
+      <Route path="/" component={HomePage} />
+      <Route path="/cv" component={CVPage} />
+      <Route>
+        <HomePage />
+      </Route>
+    </Switch>
   )
 }
 

@@ -9,6 +9,8 @@ export const profile: Profile = {
     email: 'lp.wanw@gmail.com',
     github: 'lpwanw',
     linkedin: 'lpwanw',
+    upwork: 'https://www.upwork.com/freelancers/~01945da5cf8c50be5d',
+    cv: 'https://cv.leewestern.com/',
   },
   skills: [
     {

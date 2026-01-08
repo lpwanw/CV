@@ -3,6 +3,8 @@ export interface ContactInfo {
   email: string
   github: string
   linkedin: string
+  upwork?: string
+  cv?: string
   location?: string
 }
 

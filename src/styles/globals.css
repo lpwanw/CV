@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./print.css";
 
 @theme {
   /* Color Tokens - Emerald Theme (Dark Mode Default) */

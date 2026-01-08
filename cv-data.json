@@ -1,0 +1,100 @@
+{
+  "name": "Le Phuong Tay",
+  "title": "Full-Stack Ruby on Rails Engineer",
+  "contact": {
+    "phone": "+84 393 203 261",
+    "email": "lp.wanw@gmail.com",
+    "website": "https://cv.leewestern.com",
+    "github": "https://github.com/lpwanw",
+    "linkedin": "https://www.linkedin.com/in/lpwanw/",
+    "upwork": "https://www.upwork.com/freelancers/~01945da5cf8c50be5d"
+  },
+  "summary": "Full-Stack Ruby on Rails Engineer with 4 years of experience building scalable SaaS applications. Architected workflow engines, integrated AI capabilities, and delivered end-to-end solutions from database design to production deployment. Proven track record leading development teams and shipping complex features for healthcare platforms.",
+  "skills": {
+    "backend": {
+      "title": "Backend & Frameworks",
+      "items": ["Ruby on Rails (4 years)", "Ruby", "GraphQL", "RESTful API", "Sidekiq"]
+    },
+    "database": {
+      "title": "Database & Storage",
+      "items": ["PostgreSQL", "MySQL", "DynamoDB", "Redis", "AWS S3"]
+    },
+    "frontend": {
+      "title": "Frontend & UI",
+      "items": ["JavaScript", "TypeScript", "React", "Hotwire/Stimulus", "Tailwind CSS"]
+    },
+    "devops": {
+      "title": "DevOps & Tools",
+      "items": ["Docker", "Kamal", "AWS (S3, EC2, Lambda, SNS, SES)", "Git", "CI/CD", "RSpec/TDD", "Datadog", "Sentry"]
+    }
+  },
+  "professionalExperience": [
+    {
+      "company": "TINYpulse by WebMD Health Services",
+      "role": "Full-Stack Developer",
+      "period": "Feb 2024 - Present",
+      "techStack": ["Ruby on Rails", "ReactJS", "PostgreSQL", "Microservices", "Redis"],
+      "highlights": [
+        "Develop new features for employee engagement platform using Rails + React microservices architecture",
+        "Optimize application performance through code refactoring and database query optimization",
+        "Resolve technical debt improving system maintainability and test coverage",
+        "Collaborate with cross-functional team on full-stack development initiatives"
+      ]
+    },
+    {
+      "company": "SUN* INC. (Japanese Tech Company)",
+      "role": "Software Engineer",
+      "period": "Nov 2021 - Jan 2024",
+      "techStack": ["Ruby on Rails", "NodeJS", "TypeScript", "MySQL", "DynamoDB", "AWS", "OAuth"],
+      "highlights": [
+        "Led development of healthcare applications for Japanese clients, extending project from 2 months to 1 year",
+        "Mentored team of 4 developers; managed task assignments and conducted code reviews",
+        "Integrated third-party APIs (Fitbit, Google Fit, Amazon Gift Cards) for health monitoring features",
+        "Designed efficient database structures for MySQL and DynamoDB single-table design",
+        "Implemented OAuth authentication and RESTful APIs for secure integrations"
+      ]
+    }
+  ],
+  "freelanceProjects": [
+    {
+      "name": "Novalexi - IP Management SaaS Platform",
+      "role": "Solo Backend Developer (End-to-End)",
+      "client": "Arabic Organization",
+      "period": "2024 - Present",
+      "techStack": ["Ruby on Rails", "PostgreSQL", "AWS S3", "SendGrid", "AI (ruby_llm)"],
+      "highlights": [
+        "Architected and built complete Intellectual Property management SaaS from scratch",
+        "Designed Workflow Engine with hydration templates for complex automation pipelines",
+        "Integrated AI capabilities using ruby_llm enabling intelligent chat and data analysis",
+        "Implemented file management (S3) and transactional email system (SendGrid)",
+        "Planning multi-tenant SaaS expansion architecture"
+      ]
+    },
+    {
+      "name": "Feedback Robot - Survey & Feedback Platform",
+      "role": "Backend Developer - Automation & Radar Features",
+      "period": "2023 - 2024",
+      "techStack": ["Ruby on Rails", "PostgreSQL", "Webhooks", "Third-party APIs"],
+      "highlights": [
+        "Built Automation feature: Workflow Engine with custom triggers, conditions, and actions",
+        "Developed Radar feature: Review aggregation from Google, Facebook, Yelp",
+        "Implemented webhook integrations for real-time event processing"
+      ],
+      "liveUrl": "https://www.feedbackrobot.com/"
+    }
+  ],
+  "education": {
+    "university": "Saigon University",
+    "degree": "Bachelor's in Information Technology",
+    "period": "Oct 2018 - May 2023",
+    "gpa": "3.0"
+  },
+  "activities": [
+    {
+      "title": "Programming Instructor",
+      "organization": "MindX Technology School",
+      "period": "2020 - 2023",
+      "description": "Taught foundational programming to 50+ students (kids & teens level)"
+    }
+  ]
+}
