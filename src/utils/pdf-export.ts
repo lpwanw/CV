@@ -62,7 +62,7 @@ export async function exportToPDF(options: ExportOptions = {}): Promise<void> {
   // Contact info
   doc.setFontSize(9)
   doc.setTextColor(gray600)
-  const contactText = `${cvData.contact.phone}  |  ${cvData.contact.email}  |  GitHub: github.com/lpwanw`
+  const contactText = `${cvData.contact.phone}  |  ${cvData.contact.email}  |  cv.leewestern.com  |  GitHub: github.com/lpwanw`
   doc.text(contactText, margin, y)
   y += 4
   const contactText2 = `LinkedIn: linkedin.com/in/lpwanw  |  Upwork: upwork.com/freelancers/~01945da5cf8c50be5d`
