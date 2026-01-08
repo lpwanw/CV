@@ -77,19 +77,20 @@ export const profile: Profile = {
         'Implemented file management (S3) and transactional email system (SendGrid)',
         'Planning multi-tenant SaaS expansion architecture',
       ],
-      thumbnail: '/images/projects/novalexi/thumbnail.jpg',
+      thumbnail: '/images/projects/novalexi/thumbnail.png',
       images: [
+        // {
+        //   src: '',
+        //   alt: 'Workflow engine with hydration templates',
+        //   caption: 'Workflow Engine',
+        // },
         {
-          src: '/images/projects/novalexi/workflow-engine.jpg',
-          alt: 'Workflow engine with hydration templates',
-          caption: 'Workflow Engine',
-        },
-        {
-          src: '/images/projects/novalexi/ip-management.jpg',
+          src: '/images/projects/novalexi/ip-management.png',
           alt: 'IP management dashboard',
           caption: 'IP Management',
         },
       ],
+      liveUrl: 'https://www.novalexi.com/',
     },
     {
       id: 'feedback-robot',
