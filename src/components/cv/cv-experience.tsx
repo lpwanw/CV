@@ -11,12 +11,21 @@ export function CVExperience() {
 
       {professionalExperience.map((exp, idx) => (
         <div key={idx} className="mb-2 avoid-break">
-          <div className="flex justify-between items-start">
-            <div>
-              <span className="font-semibold text-gray-900">{exp.company}</span>
-              {exp.role && (
-                <span className="text-gray-600 text-sm ml-2">— {exp.role}</span>
+          <div className="flex justify-between items-start gap-2">
+            <div className="flex items-center gap-2">
+              {exp.logo && (
+                <img
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  className="h-5 w-5 object-contain flex-shrink-0"
+                />
               )}
+              <div>
+                <span className="font-semibold text-gray-900">{exp.company}</span>
+                {exp.role && (
+                  <span className="text-gray-600 text-sm ml-2">— {exp.role}</span>
+                )}
+              </div>
             </div>
             <span className="text-gray-500 text-sm whitespace-nowrap">
               {exp.period}

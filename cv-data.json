@@ -33,6 +33,7 @@
       "company": "MealSuite",
       "role": "Ruby on Rails Developer",
       "period": "Mar 2026 - Present",
+      "logo": "/images/companies/mealsuite.png",
       "techStack": ["Ruby on Rails", "PostgreSQL", "Redis", "Sidekiq"],
       "highlights": [
         "Develop foodservice management SaaS platform serving 394M+ meals annually across healthcare and senior living facilities",
@@ -44,6 +45,7 @@
       "company": "TINYpulse by WebMD Health Services",
       "role": "Full-Stack Developer",
       "period": "Feb 2024 - Feb 2026",
+      "logo": "/images/companies/tinypulse.svg",
       "techStack": ["Ruby on Rails", "ReactJS", "PostgreSQL", "Microservices", "Redis"],
       "highlights": [
         "Developed new features for employee engagement platform using Rails + React microservices architecture",
@@ -56,6 +58,7 @@
       "company": "SUN* INC. (Japanese Tech Company)",
       "role": "Software Engineer",
       "period": "Nov 2021 - Jan 2024",
+      "logo": "/images/companies/sun-asterisk.png",
       "techStack": ["Ruby on Rails", "NodeJS", "TypeScript", "MySQL", "DynamoDB", "AWS", "OAuth"],
       "highlights": [
         "Led development of healthcare applications for Japanese clients, extending project from 2 months to 1 year",

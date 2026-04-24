@@ -18,9 +18,18 @@ export function ExperienceSection({ experiences }: ExperienceProps) {
             <MotionItem key={exp.id}>
               <Card hover>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-text-primary">{exp.company}</h3>
-                    <p className="text-primary font-medium">{exp.role}</p>
+                  <div className="flex items-start gap-3">
+                    {exp.logo && (
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        className="h-10 w-10 rounded-md object-contain bg-white p-1 flex-shrink-0"
+                      />
+                    )}
+                    <div>
+                      <h3 className="text-xl font-bold text-text-primary">{exp.company}</h3>
+                      <p className="text-primary font-medium">{exp.role}</p>
+                    </div>
                   </div>
                   <span className="text-text-secondary text-sm whitespace-nowrap">
                     {exp.period}

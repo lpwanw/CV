@@ -21,6 +21,7 @@ export interface Experience {
   tech: string[]
   highlights: string[]
   type: 'fulltime' | 'freelance'
+  logo?: string
 }
 
 export interface ProjectImage {

@@ -24,6 +24,7 @@ export interface CVData {
     period: string
     techStack: string[]
     highlights: string[]
+    logo?: string
   }>
   freelanceProjects: Array<{
     name: string

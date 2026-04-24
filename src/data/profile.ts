@@ -32,17 +32,32 @@ export const profile: Profile = {
   ],
   experience: [
     {
+      id: 'mealsuite',
+      company: 'MealSuite',
+      role: 'Ruby on Rails Developer',
+      period: 'Mar 2026 - Present',
+      type: 'fulltime',
+      logo: '/images/companies/mealsuite.png',
+      tech: ['Ruby on Rails', 'PostgreSQL', 'Redis', 'Sidekiq'],
+      highlights: [
+        'Develop foodservice management SaaS platform serving 394M+ meals annually across healthcare and senior living facilities',
+        'Build and maintain Rails backend features with PostgreSQL, Redis, and Sidekiq for high-throughput operations',
+        'Collaborate with distributed engineering team on scalable SaaS architecture',
+      ],
+    },
+    {
       id: 'tinypulse',
       company: 'TINYpulse by WebMD Health Services',
       role: 'Full-Stack Developer',
-      period: 'Feb 2024 - Present',
+      period: 'Feb 2024 - Feb 2026',
       type: 'fulltime',
+      logo: '/images/companies/tinypulse.svg',
       tech: ['Ruby on Rails', 'ReactJS', 'PostgreSQL', 'Microservices', 'Redis'],
       highlights: [
-        'Develop new features for employee engagement platform using Rails + React microservices architecture',
-        'Optimize application performance through code refactoring and database query optimization',
-        'Resolve technical debt improving system maintainability and test coverage',
-        'Collaborate with cross-functional team on full-stack development initiatives',
+        'Developed new features for employee engagement platform using Rails + React microservices architecture',
+        'Optimized application performance through code refactoring and database query optimization',
+        'Resolved technical debt improving system maintainability and test coverage',
+        'Collaborated with cross-functional team on full-stack development initiatives',
       ],
     },
     {
@@ -51,6 +66,7 @@ export const profile: Profile = {
       role: 'Software Engineer',
       period: 'Nov 2021 - Jan 2024',
       type: 'fulltime',
+      logo: '/images/companies/sun-asterisk.png',
       tech: ['Ruby on Rails', 'NodeJS', 'TypeScript', 'MySQL', 'DynamoDB', 'AWS', 'OAuth'],
       highlights: [
         'Led development of healthcare applications for Japanese clients, extending project from 2 months to 1 year',
