@@ -3,7 +3,7 @@ import type { Profile } from '@/types'
 export const profile: Profile = {
   name: 'Le Phuong Tay',
   title: 'Full-Stack Ruby on Rails Engineer',
-  summary: 'Full-Stack Ruby on Rails Engineer with 4+ years building scalable SaaS applications. Specialized in architecting workflow engines, integrating AI capabilities, and delivering end-to-end solutions from database design to production deployment. Targeting Senior/Lead Engineer role within 3 years through deep technical expertise and team leadership.',
+  summary: 'Full-Stack Ruby on Rails Engineer with 5+ years building scalable SaaS applications. Specialized in architecting workflow engines, integrating AI capabilities, and delivering end-to-end solutions from database design to production deployment. Targeting Senior/Lead Engineer role within 3 years through deep technical expertise and team leadership.',
   contact: {
     phone: '+84 393 203 261',
     email: 'lp.wanw@gmail.com',
@@ -141,6 +141,54 @@ export const profile: Profile = {
         }
       ],
       liveUrl: 'https://www.feedbackrobot.com/',
+    },
+    {
+      id: 'stumana',
+      name: 'StuMana - Tutoring Center Management SaaS',
+      description: 'Management software for small tutoring centers and independent tutors in Vietnam, with an AI teammate ("Mana") that automates tuition, attendance, and parent communication.',
+      role: 'Founder & Solo Developer (End-to-End)',
+      period: '2026 - Present',
+      tech: ['Ruby on Rails', 'Hotwire', 'PostgreSQL', 'Sidekiq', 'AI/LLM', 'Zalo OA API'],
+      highlights: [
+        'Built and shipped complete SaaS end-to-end: tuition & payment tracking with auto bank-transfer reconciliation, one-tap attendance, teacher payroll with flexible formulas',
+        'Integrated Zalo OA messaging for parent notices and templated whole-class sends',
+        'AI reads uploaded lesson plans and splits them into sessions; per-student learning health score (0-100) with early risk alerts and pre-drafted parent progress reports',
+        'Overnight automation: payment reconciliation, report preparation, alert raising',
+        'Tiered SaaS pricing (Free to Business) with per-active-student billing',
+      ],
+      thumbnail: '/images/projects/stumana/thumbnail.png',
+      images: [
+        {
+          src: '/images/projects/stumana/full-page.png',
+          alt: 'StuMana landing page',
+          caption: 'StuMana',
+        },
+      ],
+      liveUrl: 'https://stumana.com/',
+    },
+    {
+      id: 'quenify',
+      name: 'Quenify - Salon Retention SaaS',
+      description: 'Retention software for Vietnamese nail/hair/spa salons - automatic return-visit reminders, POS invoicing, loyalty tiers. A retention layer on top of whatever tools the salon already uses.',
+      role: 'Founder & Solo Developer (End-to-End)',
+      period: '2026 - Present',
+      tech: ['Ruby on Rails', 'Hotwire', 'PostgreSQL', 'Zalo ZNS', 'Google Calendar API', 'AI/LLM'],
+      highlights: [
+        'Built and shipped complete SaaS end-to-end: rebooking scheduled at checkout, reminders fire automatically via Zalo ZNS on due date',
+        'Counter POS invoicing in VND with revenue and best-selling-service reports',
+        'Loyalty points, owner-defined rewards, automatic VIP tiers with per-tier discounts',
+        'AI reads a photo of the salon price list and generates the service catalog',
+        'Per-technician calendars synced to Google Calendar; Google review requests after each visit; PDPL/Decree 13 compliance',
+      ],
+      thumbnail: '/images/projects/quenify/thumbnail.png',
+      images: [
+        {
+          src: '/images/projects/quenify/full-page.png',
+          alt: 'Quenify landing page',
+          caption: 'Quenify',
+        },
+      ],
+      liveUrl: 'https://quenify.com/',
     },
   ],
   education: {

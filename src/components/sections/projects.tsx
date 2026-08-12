@@ -10,7 +10,7 @@ export function Projects({ projects }: ProjectsProps) {
     <section id="projects" className="section">
       <Container>
         <MotionSection>
-          <SectionTitle>Freelance Projects</SectionTitle>
+          <SectionTitle>Freelance & Founder Projects</SectionTitle>
         </MotionSection>
 
         <MotionList className="grid md:grid-cols-2 gap-6">

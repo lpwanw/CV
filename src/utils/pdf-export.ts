@@ -156,7 +156,7 @@ export async function exportToPDF(options: ExportOptions = {}): Promise<void> {
   doc.setFontSize(11)
   doc.setTextColor(gray900)
   doc.setFont('helvetica', 'bold')
-  doc.text('Freelance Projects (Upwork)', margin, y)
+  doc.text('Freelance & Founder Projects', margin, y)
   y += 1
   addLine()
   y += 3

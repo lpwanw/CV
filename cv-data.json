@@ -9,11 +9,11 @@
     "linkedin": "https://www.linkedin.com/in/lpwanw/",
     "upwork": "https://www.upwork.com/freelancers/~01945da5cf8c50be5d"
   },
-  "summary": "Full-Stack Ruby on Rails Engineer with 4 years of experience building scalable SaaS applications. Architected workflow engines, integrated AI capabilities, and delivered end-to-end solutions from database design to production deployment. Proven track record leading development teams and shipping complex features for healthcare platforms.",
+  "summary": "Full-Stack Ruby on Rails Engineer with 5 years of experience building scalable SaaS applications. Architected workflow engines, integrated AI capabilities, and delivered end-to-end solutions from database design to production deployment. Proven track record leading development teams and shipping complex features for healthcare platforms.",
   "skills": {
     "backend": {
       "title": "Backend & Frameworks",
-      "items": ["Ruby on Rails (4 years)", "Ruby", "GraphQL", "RESTful API", "Sidekiq"]
+      "items": ["Ruby on Rails (5 years)", "Ruby", "GraphQL", "RESTful API", "Sidekiq"]
     },
     "database": {
       "title": "Database & Storage",
@@ -95,6 +95,32 @@
         "Implemented webhook integrations for real-time event processing"
       ],
       "liveUrl": "https://www.feedbackrobot.com/"
+    },
+    {
+      "name": "StuMana - Tutoring Center Management SaaS",
+      "role": "Founder & Solo Developer (End-to-End)",
+      "period": "2026 - Present",
+      "techStack": ["Ruby on Rails", "Hotwire", "PostgreSQL", "Sidekiq", "AI/LLM", "Zalo OA API"],
+      "highlights": [
+        "Built and shipped complete SaaS for Vietnamese tutoring centers: tuition tracking with auto bank-transfer reconciliation, one-tap attendance, flexible teacher payroll",
+        "Integrated Zalo OA messaging for parent notices; AI splits uploaded lesson plans into sessions",
+        "Per-student learning health score (0-100) with early risk alerts and pre-drafted parent progress reports",
+        "Overnight automation: payment reconciliation, report preparation, alert raising"
+      ],
+      "liveUrl": "https://stumana.com/"
+    },
+    {
+      "name": "Quenify - Salon Retention SaaS",
+      "role": "Founder & Solo Developer (End-to-End)",
+      "period": "2026 - Present",
+      "techStack": ["Ruby on Rails", "Hotwire", "PostgreSQL", "Zalo ZNS", "Google Calendar API", "AI/LLM"],
+      "highlights": [
+        "Built and shipped retention SaaS for Vietnamese nail/hair/spa salons: rebooking at checkout with automatic Zalo ZNS reminders on due date",
+        "Counter POS invoicing in VND with revenue reports; loyalty points and automatic VIP tiers",
+        "AI reads a photo of the salon price list and generates the service catalog",
+        "Per-technician calendars synced to Google Calendar; Google review requests after each visit"
+      ],
+      "liveUrl": "https://quenify.com/"
     }
   ],
   "education": {

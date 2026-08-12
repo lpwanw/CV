@@ -45,7 +45,7 @@ export function CVExperience() {
       ))}
 
       <h3 className="text-base font-bold border-b border-gray-300 mb-2 pb-1 mt-3">
-        Freelance Projects (Upwork)
+        Freelance & Founder Projects
       </h3>
 
       {freelanceProjects.map((project, idx) => (
