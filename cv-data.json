@@ -9,7 +9,7 @@
     "linkedin": "https://www.linkedin.com/in/lpwanw/",
     "upwork": "https://www.upwork.com/freelancers/~01945da5cf8c50be5d"
   },
-  "summary": "Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Founder and solo developer of two live SaaS products (StuMana, Quenify). Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.",
+  "summary": "Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Founder and solo developer of StuMana, a live tutoring-center management SaaS. Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.",
   "skills": {
     "backend": {
       "title": "Backend & Frameworks",
@@ -108,19 +108,6 @@
         "Overnight automation: payment reconciliation, report preparation, alert raising"
       ],
       "liveUrl": "https://stumana.com/"
-    },
-    {
-      "name": "Quenify - Salon Retention SaaS",
-      "role": "Founder & Solo Developer (End-to-End)",
-      "period": "2026 - Present",
-      "techStack": ["Ruby on Rails", "Hotwire", "PostgreSQL", "Zalo ZNS", "Google Calendar API", "AI/LLM"],
-      "highlights": [
-        "Built and shipped retention SaaS for Vietnamese nail/hair/spa salons: rebooking at checkout with automatic Zalo ZNS reminders on due date",
-        "Counter POS invoicing in VND with revenue reports; loyalty points and automatic VIP tiers",
-        "AI reads a photo of the salon price list and generates the service catalog",
-        "Per-technician calendars synced to Google Calendar; Google review requests after each visit"
-      ],
-      "liveUrl": "https://quenify.com/"
     }
   ],
   "education": {
