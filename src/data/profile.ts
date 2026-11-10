@@ -3,7 +3,7 @@ import type { Profile } from '@/types'
 export const profile: Profile = {
   name: 'Le Phuong Tay',
   title: 'Full-Stack Ruby on Rails Engineer',
-  summary: 'Full-Stack Ruby on Rails Engineer with 5+ years building scalable SaaS applications. Specialized in architecting workflow engines, integrating AI capabilities, and delivering end-to-end solutions from database design to production deployment. Targeting Senior/Lead Engineer role within 3 years through deep technical expertise and team leadership.',
+  summary: 'Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.',
   contact: {
     phone: '+84 393 203 261',
     email: 'lp.wanw@gmail.com',
@@ -84,7 +84,7 @@ export const profile: Profile = {
       description: 'Complete Intellectual Property management SaaS built from scratch for Arabic organization.',
       role: 'Solo Backend Developer (End-to-End)',
       client: 'Arabic Organization',
-      period: '2024 - Present',
+      period: '2024 - Dec 2025',
       tech: ['Ruby on Rails', 'PostgreSQL', 'AWS S3', 'SendGrid', 'AI (ruby_llm)'],
       highlights: [
         'Architected and built complete Intellectual Property management SaaS from scratch',
@@ -113,7 +113,7 @@ export const profile: Profile = {
       name: 'Feedback Robot - AI-Powered Customer Feedback Platform',
       description: 'All-in-one customer feedback platform with AI-powered survey creation, automated sentiment analysis, and workflow automation.',
       role: 'Backend Developer - Automation & Radar Features',
-      period: '2023 - 2024',
+      period: '2023 - Jul 2026',
       tech: ['Ruby on Rails', 'PostgreSQL', 'Webhooks', 'REST APIs', 'Third-party Integrations'],
       highlights: [
         'Built Automation feature: Workflow Engine with custom triggers, conditions, and actions for automated feedback processing',

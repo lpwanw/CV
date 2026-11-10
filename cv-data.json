@@ -9,7 +9,7 @@
     "linkedin": "https://www.linkedin.com/in/lpwanw/",
     "upwork": "https://www.upwork.com/freelancers/~01945da5cf8c50be5d"
   },
-  "summary": "Full-Stack Ruby on Rails Engineer with 5 years of experience building scalable SaaS applications. Architected workflow engines, integrated AI capabilities, and delivered end-to-end solutions from database design to production deployment. Proven track record leading development teams and shipping complex features for healthcare platforms.",
+  "summary": "Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.",
   "skills": {
     "backend": {
       "title": "Backend & Frameworks",
@@ -74,7 +74,7 @@
       "name": "Novalexi - IP Management SaaS Platform",
       "role": "Solo Backend Developer (End-to-End)",
       "client": "Arabic Organization",
-      "period": "2024 - Present",
+      "period": "2024 - Dec 2025",
       "techStack": ["Ruby on Rails", "PostgreSQL", "AWS S3", "SendGrid", "AI (ruby_llm)"],
       "highlights": [
         "Architected and built complete Intellectual Property management SaaS from scratch",
@@ -87,7 +87,7 @@
     {
       "name": "Feedback Robot - Survey & Feedback Platform",
       "role": "Backend Developer - Automation & Radar Features",
-      "period": "2023 - 2024",
+      "period": "2023 - Jul 2026",
       "techStack": ["Ruby on Rails", "PostgreSQL", "Webhooks", "Third-party APIs"],
       "highlights": [
         "Built Automation feature: Workflow Engine with custom triggers, conditions, and actions",
