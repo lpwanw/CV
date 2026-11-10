@@ -99,13 +99,14 @@
     {
       "name": "StuMana - Tutoring Center Management SaaS",
       "role": "Founder & Solo Developer (End-to-End)",
-      "period": "2026 - Present",
-      "techStack": ["Ruby on Rails", "Hotwire", "PostgreSQL", "Sidekiq", "AI/LLM", "Zalo OA API"],
+      "period": "2025 - Present",
+      "techStack": ["Ruby on Rails 8", "PostgreSQL (pgvector)", "Solid Queue", "Hotwire", "React", "Gemini (RubyLLM)", "MCP", "Zalo OA API"],
       "highlights": [
-        "Built and shipped complete SaaS for Vietnamese tutoring centers: tuition tracking with auto bank-transfer reconciliation, one-tap attendance, flexible teacher payroll",
-        "Integrated Zalo OA messaging for parent notices; AI splits uploaded lesson plans into sessions",
-        "Per-student learning health score (0-100) with early risk alerts and pre-drafted parent progress reports",
-        "Overnight automation: payment reconciliation, report preparation, alert raising"
+        "Built bank-transfer tuition reconciliation: bank webhooks plus 15-minute polling catch-up, idempotent on transaction code, row-locked settlement",
+        "Designed multi-tenant data model with org-scoped records, per-org subdomains and custom domains, and Pundit authorization",
+        "Run 75 scheduled Solid Queue jobs for invoicing, reconciliation, teacher payroll periods, Zalo OA/ZNS reminders and at-risk student alerts",
+        "Shipped LLM features with Gemini via RubyLLM: lesson-plan extraction into teaching units, AI-drafted progress comments, pgvector RAG knowledge base",
+        "Exposed 67 MCP tools behind Doorkeeper OAuth 2.1 so AI agents can operate the platform"
       ],
       "liveUrl": "https://stumana.com/"
     }
