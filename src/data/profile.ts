@@ -3,7 +3,7 @@ import type { Profile } from '@/types'
 export const profile: Profile = {
   name: 'Le Phuong Tay',
   title: 'Full-Stack Ruby on Rails Engineer',
-  summary: 'Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Founder and solo developer of two live SaaS products (StuMana, Quenify). Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.',
+  summary: 'Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Founder and solo developer of StuMana, a live tutoring-center management SaaS.Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.',
   contact: {
     phone: '+84 393 203 261',
     email: 'lp.wanw@gmail.com',
@@ -165,30 +165,6 @@ export const profile: Profile = {
         },
       ],
       liveUrl: 'https://stumana.com/',
-    },
-    {
-      id: 'quenify',
-      name: 'Quenify - Salon Retention SaaS',
-      description: 'Retention software for Vietnamese nail/hair/spa salons - automatic return-visit reminders, POS invoicing, loyalty tiers. A retention layer on top of whatever tools the salon already uses.',
-      role: 'Founder & Solo Developer (End-to-End)',
-      period: '2026 - Present',
-      tech: ['Ruby on Rails', 'Hotwire', 'PostgreSQL', 'Zalo ZNS', 'Google Calendar API', 'AI/LLM'],
-      highlights: [
-        'Built and shipped complete SaaS end-to-end: rebooking scheduled at checkout, reminders fire automatically via Zalo ZNS on due date',
-        'Counter POS invoicing in VND with revenue and best-selling-service reports',
-        'Loyalty points, owner-defined rewards, automatic VIP tiers with per-tier discounts',
-        'AI reads a photo of the salon price list and generates the service catalog',
-        'Per-technician calendars synced to Google Calendar; Google review requests after each visit; PDPL/Decree 13 compliance',
-      ],
-      thumbnail: '/images/projects/quenify/thumbnail.png',
-      images: [
-        {
-          src: '/images/projects/quenify/full-page.png',
-          alt: 'Quenify landing page',
-          caption: 'Quenify',
-        },
-      ],
-      liveUrl: 'https://quenify.com/',
     },
   ],
   education: {
