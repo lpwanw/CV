@@ -3,7 +3,7 @@ import type { Profile } from '@/types'
 export const profile: Profile = {
   name: 'Le Phuong Tay',
   title: 'Full-Stack Ruby on Rails Engineer',
-  summary: 'Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.',
+  summary: 'Full-Stack Ruby on Rails Engineer with 5 years of production experience across healthcare, HR-tech and foodservice SaaS, plus 3+ years of parallel freelance work building products end-to-end for global clients. Founder and solo developer of two live SaaS products (StuMana, Quenify). Led and mentored a team of 4 developers delivering healthcare applications for Japanese clients. Strong in Rails backend and API design, MySQL/PostgreSQL/DynamoDB data modeling and query performance, and AWS. Built workflow engines and LLM-powered features from scratch, using AI-assisted delivery backed by automated tests and rigorous code review.',
   contact: {
     phone: '+84 393 203 261',
     email: 'lp.wanw@gmail.com',
